@@ -3,7 +3,9 @@
 	"version": "1.0.0",
 	"description": "Clean React Native projects by removing node_modules, builds, lockfiles, caches, and more.",
 	"main": "./bin/cli.js",
-	"bin": "./bin/cli.js",
+	"bin": {
+		"react-native-clean": "bin/cli.js"
+	},
 	"scripts": {
 		"clean": "rm -rf ./node_modules && rm -rf package-lock.json && npm install",
 		"test": "npx jest",
