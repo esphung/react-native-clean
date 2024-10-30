@@ -6,6 +6,10 @@
 	"bin": {
 		"react-native-clean": "bin/cli.js"
 	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/esphung/react-native-clean"
+	},
 	"scripts": {
 		"clean": "rm -rf ./node_modules && rm -rf package-lock.json && npm install",
 		"test": "npx jest",
