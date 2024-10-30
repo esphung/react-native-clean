@@ -1,22 +1,23 @@
 {
-  "name": "react-native-clean",
-  "version": "1.0.0",
-  "description": "clean react native projects",
-  "main": "./index.ts",
-  "scripts": {
-    "test": "npx jest",
-    "lint": "npx eslint .",
-    "start": "npx ts-node index.ts",
-    "pretty:check": "npx prettier --check ."
-  },
-  "author": "eric phung",
-  "license": "ISC",
-  "devDependencies": {
-    "@eslint/js": "^9.13.0",
-    "@types/node": "^22.8.4",
-    "eslint": "^9.13.0",
-    "globals": "^15.11.0",
-    "typescript": "^5.6.3",
-    "typescript-eslint": "^8.12.2"
-  }
+	"name": "react-native-clean",
+	"version": "1.0.0",
+	"description": "clean react native projects",
+	"main": "./index.ts",
+	"scripts": {
+		"test": "npx jest",
+		"lint": "npx eslint .",
+		"start": "npx ts-node index.ts",
+		"pretty:check": "npx prettier --check .",
+		"pretty:write": "npx prettier --write ."
+	},
+	"author": "eric phung",
+	"license": "ISC",
+	"devDependencies": {
+		"@eslint/js": "^9.13.0",
+		"@types/node": "^22.8.4",
+		"eslint": "^9.13.0",
+		"globals": "^15.11.0",
+		"typescript": "^5.6.3",
+		"typescript-eslint": "^8.12.2"
+	}
 }
