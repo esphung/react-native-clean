@@ -1,6 +1,4 @@
-import globals from 'globals';
 import pluginJs from '@eslint/js';
-import tseslint from 'typescript-eslint';
 
 export default [
 	{
@@ -14,11 +12,7 @@ export default [
 		files: ['*/**/*.ts'],
 	},
 	{
-		languageOptions: { globals: globals.node },
-	},
-	{
-		ignores: ['node_modules/**', 'dist/**', 'commitlint.config.js'],
+		ignores: ['node_modules/**', 'commitlint.config.js', 'bin/**'],
 	},
 	pluginJs.configs.recommended,
-	...tseslint.configs.recommended,
 ];

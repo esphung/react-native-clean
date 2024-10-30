@@ -5,9 +5,3 @@
 ```
 npm run clean
 ```
-
-### Run
-
-```
-npm run start
-```
