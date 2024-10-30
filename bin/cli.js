@@ -15,8 +15,10 @@ console.log(`Current working directory: ${currentDir}`);
 const files = fs.readdirSync(currentDir);
 console.log('Files in current directory:', files);
 
+console.debug('nvm is installed, checking for .nvmrc file...');
+
 // check if nvm cli is installed
-if (!shell.which('nvm -v')) {
+if (!shell.which('nvm')) {
 	console.error('nvm is not installed, please install it to set node version');
 } else {
 	// check if .nvmrc exists
@@ -32,10 +34,11 @@ if (!shell.which('nvm -v')) {
 }
 
 // check if rvm cli is installed
-if (!shell.which('rvm -v')) {
+if (!shell.which('rvm')) {
 	console.error('rvm is not installed, please install it to set ruby version');
 } else {
 	// check if .ruby-version exists
+	console.debug('rvm is installed, checking for .ruby-version file...');
 	const rubyVersionPath = path.join(currentDir, '.ruby-version');
 	if (fs.existsSync(rubyVersionPath)) {
 		console.log('.ruby-version file exists, switching ruby version...');
