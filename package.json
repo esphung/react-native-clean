@@ -2,21 +2,28 @@
 	"name": "react-native-clean",
 	"version": "1.0.0",
 	"description": "clean react native projects",
-	"main": "./index.ts",
+	"main": "./dist/index.js",
 	"scripts": {
+		"clean": "rm -rf ./node_modules && rm -rf ./dist && rm -rf package-lock.json && npm install && npx tsc",
 		"test": "npx jest",
-		"lint": "npx eslint .",
-		"start": "npx ts-node index.ts",
-		"pretty:check": "npx prettier --check .",
-		"pretty:write": "npx prettier --write ."
+		"lint": "npx eslint --c eslint.config.mjs .",
+    "start": "rm -rf ./dist && npx tsc && node ./dist/index.js",
+		"pretty:check": "npx prettier --check ./src",
+		"pretty:write": "npx prettier --write ./src",
+		"typecheck": "npx tsc --noEmit",
+		"precommit": "npm run lint && npm run typecheck && npm run pretty:check",
+		"prepare": "husky"
 	},
 	"author": "eric phung",
 	"license": "ISC",
 	"devDependencies": {
+		"@commitlint/cli": "^19.5.0",
+		"@commitlint/config-conventional": "^19.5.0",
 		"@eslint/js": "^9.13.0",
 		"@types/node": "^22.8.4",
 		"eslint": "^9.13.0",
 		"globals": "^15.11.0",
+		"husky": "^9.1.6",
 		"typescript": "^5.6.3",
 		"typescript-eslint": "^8.12.2"
 	}
